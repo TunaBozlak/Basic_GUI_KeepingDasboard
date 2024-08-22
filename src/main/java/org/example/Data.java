@@ -116,10 +116,8 @@ public class Data {
                 if (rs.next()) {
                     int count = rs.getInt(1);
                     if (count > 0) {
-                        // Kayıt mevcutsa uyarı mesajını yazdır
                         System.out.println("Bu kayıt zaten mevcut: KPI Adı = " + kpiName + ", Şehir = " + city + ", Tarih = " + new java.sql.Date(date.getTime()));
                     } else {
-                        // Kayıt mevcut değilse, yeni kayıt ekle
                         insertStmt.setString(1, kpiName);
                         insertStmt.setString(2, city);
                         insertStmt.setDate(3, new java.sql.Date(date.getTime()));

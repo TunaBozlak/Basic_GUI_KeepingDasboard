@@ -98,7 +98,6 @@ public class ChartManager {
 
                 chartPanelContainer.add(barChartPanel);
             }
-
             chartPanelContainer.revalidate();
             chartPanelContainer.repaint();
         });
