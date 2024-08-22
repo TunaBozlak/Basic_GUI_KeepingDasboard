@@ -1,0 +1,6 @@
+  private void loadTarihler() {
+        tumTarihlerSet = Arrays.stream(dataManager.getSortedTarihlerArray())
+                .map(this::parseDate)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toSet());
+    }
